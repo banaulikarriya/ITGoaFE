@@ -1,0 +1,8 @@
+html *{
+    color: black;
+}
+
+:host /deep/.form-control{
+color: black !important;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

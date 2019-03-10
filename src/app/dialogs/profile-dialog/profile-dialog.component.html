@@ -1,0 +1,66 @@
+<div class="modal-header">
+    <h4 class="modal-title">Edit Profile!</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+<form [formGroup]="profileForm">
+    <div class="row">
+       <div class="col-md-12">
+           <div class="form-group">
+               <input type="text" class="form-control" placeholder="Name" formControlName="name">
+           </div>
+       </div>
+    </div>
+    <div class="row">
+       <div class="col-md-12">
+           <div class="form-group">
+               <input type="text" class="form-control" placeholder="username" formControlName="username">
+           </div>
+       </div>
+    </div>
+    <div class="row">
+       <div class="col-md-6">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="contact" formControlName="contact">
+        </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+          <input type="text" class="form-control" placeholder="email" formControlName="email">
+      </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="city" formControlName="city">
+        </div>
+    </div>
+    <div class="col-md-4">
+     <div class="form-group">
+         <input type="text" class="form-control" placeholder="state" formControlName="state">
+     </div>
+ </div>
+ <div class="col-md-4">
+  <div class="form-group">
+      <input type="text" class="form-control" placeholder="pincode" formControlName="pincode">
+  </div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+      <div class="form-group">
+        <label>Add more about yourself/work</label>
+        <textarea class="form-control" rows="4" placeholder="Tell us about yourself/work" formControlName="description"></textarea>
+      </div>
+  </div>
+</div>
+</form>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+    <button type="button" class="btn" (click)="saveProfile()">Save</button>
+  </div>
